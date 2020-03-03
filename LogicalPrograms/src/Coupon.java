@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
+
 public class Coupon {
 	
 	public static int requiredRandom(int n) {
