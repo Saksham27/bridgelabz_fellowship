@@ -15,7 +15,9 @@ public class LeapYear {
 	public static void main(String[] args) {
 		int year;
 		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter year : ");
 		year = sc.nextInt();
+		sc.close();
 		
 		if( year < 1000 || year > 9999 ) {
 			System.out.println("Enter a valid year.");
