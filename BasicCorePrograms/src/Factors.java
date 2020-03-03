@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
 public class Factors {
-	
-	
-	
+
 	public static void primeFactors(int n){
 		int m=1;
 		int i=2;
