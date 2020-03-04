@@ -32,12 +32,12 @@ public class Stopwatch {
 		if(c=='y' || c=='Y') {
 			t1=startStopwatch();
 		}
-		System.out.println("Now Press y when you want to stop the stopwatch : ");
+		System.out.println("Now Press n when you want to stop the stopwatch : ");
 		c=sc.next().charAt(0);
 		if(c=='n' || c=='N') {
 			t2=stopStopwatch();
 		}
-		System.out.println(timeElapsed(t2,t1));
+		System.out.println("time elapsed : "+timeElapsed(t2,t1));
 		
 		
 	}
