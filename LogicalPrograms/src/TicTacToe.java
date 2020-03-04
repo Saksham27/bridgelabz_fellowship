@@ -5,14 +5,15 @@ public class TicTacToe {
 
 	public static boolean userMove(char[][] b) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Your move, enter the position for your move : ");
+		System.out.println("enter the position for your move : ");
+		System.out.println("*********** Your Move *****************");
 		int c = sc.nextInt();
 		return updateBoard(b,c,'X');
 	}
 	
 	public static boolean cpuMove(char[][] b) {
 		Random r = new Random();
-		System.out.println("CPU move");
+		System.out.println("*********** CPU Move *****************");
 		int x = r.nextInt(9)+1;
 		
 		return updateBoard(b,x,'O');
@@ -63,11 +64,14 @@ public class TicTacToe {
 		if(c[0]=='a') {
 			return false;
 		}else {
+			showBoard(b);
 			if(c[0]=='X') {
-				System.out.println("You win !!!!");
+				
+				System.out.println("\n_______ Wohoooo !!! You won. _______");
 			}
 			if(c[0]=='O') {
-				System.out.println("CPU win !!!!");
+				
+				System.out.println("\n_______ Better luck next time !!! CPU won. _______");
 			}
 			return true;
 		}
