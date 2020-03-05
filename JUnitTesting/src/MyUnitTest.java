@@ -34,6 +34,11 @@ import org.junit.Test;
 		public void testToBinary() {
 			assertEquals("00000010",Util.toBinary(2));
 		}
+		
+		@Test
+		public void testSwapNibble() {
+			assertEquals(192,Binary.swapNibble(12));
+		}
 
 	public static void main(String[] args) {
 		
