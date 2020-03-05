@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class searchWord {
 	
-
 	
 	public static void sortList(String[] s) {
 		int l = s.length;
@@ -68,15 +67,10 @@ public class searchWord {
 		}
 		scf.close();
 		int length=s.length;
-		for(int i=0;i<length;i++) {
-			System.out.print(s[i]+" ");
-		}
-		System.out.println();
+		
 		sortList(s);
 		
-		for(int i=0;i<length;i++) {
-			System.out.print(s[i]+" ");
-		}
+		
 		
 		int r =searchRecursion(word,s,0,length);
 		if(r==-1) {
