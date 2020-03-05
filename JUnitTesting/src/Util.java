@@ -53,16 +53,21 @@ public class Util {
 	// ******************************************************************************
 	public static String toBinary(int n) {
 		int result=0;
+		int counter=1;
 		while(n>=1) {
-			result = result + n%2 *10;
+			result = result + n%2 *counter;
 			n=n/2;
+			counter=counter*10;
 		}
 		
 		String s = String.format("%08d", result);
-		System.out.println(s);
+		
 		return s;
 		
 	}
+	
+	/// ********************************************************************************
+	
 	 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
