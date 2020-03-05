@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Util {
 	
-	
+	// *************************************************************************************
 	public static String dayOfWeek(int date,int month,int year) {
 		int y = year - (14-month)/12;
 		int x = y + y/4 - y/100 + y/400;
@@ -28,16 +28,19 @@ public class Util {
 		}
 	}
 	
+	// *************************************************************************
 	public static double temperaturConversion(int fahrenheit) {
 		return (fahrenheit -32)*(5/9);
 	}
 	
+	// *************************************************************************
 	public static double monthlyPayment(int principle,int year,double rate) {
 		int n = 12*year;
 		double r = rate/(12*100);
 		return (principle*r)/(1-Math.pow(1+r, -n));
 	}
 	
+	// ****************************************************************************
 	public static double sqrt(int n) {
 		double t=n;
 		double EPSILON = 1e-15;
@@ -45,6 +48,20 @@ public class Util {
 			t=(n/t+t)/2;
 		}
 		return t;
+	}
+	
+	// ******************************************************************************
+	public static String toBinary(int n) {
+		int result=0;
+		while(n>=1) {
+			result = result + n%2 *10;
+			n=n/2;
+		}
+		
+		String s = String.format("%08d", result);
+		System.out.println(s);
+		return s;
+		
 	}
 	 
 	public static void main(String[] args) {
@@ -62,6 +79,8 @@ public class Util {
 		if(month>=1 && month <=12 && date>=1 && date<=31 ) {
 			System.out.println("Day : "+dayOfWeek(date,month,year));
 		}
+		
+		toBinary(12);
 	}
 
 }

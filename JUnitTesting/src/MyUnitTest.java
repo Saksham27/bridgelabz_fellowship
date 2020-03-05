@@ -29,6 +29,11 @@ import org.junit.Test;
 		public void testSqrt() {
 			assertEquals(2,Util.sqrt(4),0);
 		}
+		
+		@Test
+		public void testToBinary() {
+			assertEquals("00000010",Util.toBinary(2));
+		}
 
 	public static void main(String[] args) {
 		
