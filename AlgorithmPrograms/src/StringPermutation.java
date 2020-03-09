@@ -18,6 +18,7 @@ public class StringPermutation {
 		}else {
 			for(int i=l;i<e;i++) {
 				s = swap(s,l,i);
+				
 				stringPermutation(s,l+1,e);
 			}
 		}
