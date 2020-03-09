@@ -16,11 +16,31 @@ public class FindPrime {
 				counter=true;
 			}
 			if(counter==true) {
-				System.out.print(k+" ");
+				if(isPalindrome(k)) {
+					System.out.println(k+" ");
+				}
+				
 				//counter=true;
 			}
 			
 			k++;	
+		}
+	}
+	
+	static boolean isPalindrome(int n) {
+		int key = n;
+		int sum=0;
+		while(key > 0) {
+			sum = sum*10 + key % 10;
+			key=key/10;
+		}
+		
+		if(sum==n) {
+			
+			return true;
+		}else {
+			
+			return false;
 		}
 	}
 	
